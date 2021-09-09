@@ -1,11 +1,11 @@
-from django.db import models
+from django.db.models import Model, CharField,TextField, ImageField, DateTimeField 
 
-class Muffin(models.Model):
-    title = models.CharField(max_length=54)
-    description = models.TextField()
-    image = models.ImageField(upload_to= 'muffin')
-    created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de Creación')
-    updated= models.DateTimeField(auto_now=True, verbose_name='Feca de Modificación')
+class Muffin(Model):
+    title = CharField(max_length=54)
+    description =TextField()
+    image = ImageField(upload_to= 'muffin')
+    created =DateTimeField(auto_now_add=True, verbose_name='Fecha de Creación')
+    updated= DateTimeField(auto_now=True, verbose_name='Fecha de Modificación')
 
 class Meta:
     verbose_name ='Ponquesito'

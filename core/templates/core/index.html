@@ -21,29 +21,19 @@
         <h1 class="display-4 lead pt-5">Ponquecitos</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla mollitia quisquam, debitis itaque tenetur omnis?</p>
         <div class="pb-5 pt-5">
-          <a href="#" class="bg-dark text-danger py-3 px-5">Contácto</a>
+          <a href="#" class="bg-dark text-danger py-3 px-5">Contacto</a>
         </div>
       </div><!-- end contenido principal -->
       <!-- contenedor con las tarjetas -->
-      <div class="row py-5">
+      <div class="row py-5">n
+        {%for muffin in muffins %}
         <div class="col-md-4">
-          <h4>Lorem, ipsum dolor.</h4>
+          <h4>{{muffin.title}}</h4>
           <hr>
-          <img src="cupcake1.jpeg" alt="cupcake1" class="img-fluid rounded-3">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est aut a mollitia placeat minus exercitationem laborum quos porro sapiente labore.</p>
+          <img src="{{muffin.image.url}}" alt="cupcake1" class="img-fluid rounded-3">
+          <p>{{muffin.description}}</p>
         </div>
-        <div class="col-md-4">
-          <h4>Lorem, ipsum dolor.</h4>
-          <hr>
-          <img src="cupcake2.png" alt="cupcake1" class="img-fluid rounded-3">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est aut a mollitia placeat minus exercitationem laborum quos porro sapiente labore.</p>
-        </div>
-        <div class="col-md-4">
-          <h4>Lorem, ipsum dolor.</h4>
-          <hr>
-          <img src="cupcake3.jpg" alt="cupcake1" class="img-fluid rounded-3">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est aut a mollitia placeat minus exercitationem laborum quos porro sapiente labore.</p>
-        </div>
+        {% endfor %}
       </div><!-- contenedor con las tarjetas -->
       <footer class="bg-dark text-center">
         <a href="#" class="text-white ">Todos los derechos reservados.</a>
